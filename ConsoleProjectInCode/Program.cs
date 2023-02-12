@@ -21,7 +21,7 @@ namespace ConsoleProjectInCode
                 Console.WriteLine("     7: Employees who started work during the entered date range");
                 Console.WriteLine("     8: Show the average salary of the employees in the selected department");
                 Console.WriteLine("     0: Out menu");
-
+                Console.WriteLine("\n<=======================================> MENU <=======================================>");
                 Console.WriteLine("\nPlease select an operation and click Enter button:");
                 operation = Console.ReadLine();
                 switch (operation)
@@ -63,6 +63,7 @@ namespace ConsoleProjectInCode
                     #endregion
                     case "3":
                         #region case3
+                        Console.Clear();
                         string fullname;
                         do
                         {
@@ -117,6 +118,7 @@ namespace ConsoleProjectInCode
                         } while (trueOrFalse2 == false);
 
                         AddEmployee(fullname, position, salary, (Department)Enum.Parse(typeof(Department), typeStr), wantedDate);
+                        Console.ReadLine();
                         break;
                     #endregion
                     case "4":
@@ -215,14 +217,15 @@ namespace ConsoleProjectInCode
                     #endregion
                     case "0":
                         #region case0
-
-                        Console.WriteLine("     Thank you");
-
+                        Console.Clear();
+                        Console.WriteLine("\n\n<=======================================> Thank You <=======================================>");
+                        Console.ReadLine();
                         break;
                     default:
+                        Console.Clear();
+                        Console.WriteLine("\n     You choose the wrong selection");
 
-                        Console.WriteLine("     You choose the wrong selection");
-
+                        Console.ReadLine();
                         break;
                         #endregion
                 }
@@ -280,7 +283,7 @@ namespace ConsoleProjectInCode
             }
             else
             {
-                Console.WriteLine("Duzgun department secmediniz!!!");
+                Console.WriteLine("You have not selected the correct department!!!");
             }
             return -1;
         }
