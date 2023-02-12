@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Khalid Suleymanov\\source\\repos\\ConsoleProjectInCode\\ConsoleProjectInCode\\ConsoleProjectInCode.csproj",
+      "projectUniqueName": "C:\\Users\\Khalid Suleymanov\\source\\repos\\ConsoleProjectInCode\\KhalidConsoleApp2023\\ConsoleProjectInCode\\ConsoleProjectInCode.csproj",
       "projectName": "ConsoleProjectInCode",
-      "projectPath": "C:\\Users\\Khalid Suleymanov\\source\\repos\\ConsoleProjectInCode\\ConsoleProjectInCode\\ConsoleProjectInCode.csproj",
+      "projectPath": "C:\\Users\\Khalid Suleymanov\\source\\repos\\ConsoleProjectInCode\\KhalidConsoleApp2023\\ConsoleProjectInCode\\ConsoleProjectInCode.csproj",
       "packagesPath": "C:\\Users\\Khalid Suleymanov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Khalid Suleymanov\\source\\repos\\ConsoleProjectInCode\\ConsoleProjectInCode\\obj\\",
+      "outputPath": "C:\\Users\\Khalid Suleymanov\\source\\repos\\ConsoleProjectInCode\\KhalidConsoleApp2023\\ConsoleProjectInCode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Khalid Suleymanov\\AppData\\Roaming\\NuGet\\NuGet.Config",
