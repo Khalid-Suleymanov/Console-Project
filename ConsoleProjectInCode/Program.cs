@@ -63,8 +63,13 @@ namespace ConsoleProjectInCode
                     #endregion
                     case "3":
                         #region case3
-                        Console.WriteLine("Please enter Fullname");
-                        string fullname = Console.ReadLine();
+                        string fullname;
+                        do
+                        {
+                            Console.WriteLine("Please enter Fullname");
+                            fullname = Console.ReadLine();
+                        } while (!FullName(fullname));
+
                         Console.WriteLine("Please enter Department");
                         foreach (var item in Enum.GetValues(typeof(Department)))
                         {
@@ -313,13 +318,49 @@ namespace ConsoleProjectInCode
                 if (item.FullName.Contains(name1))
                 {
                     searchCount++;
-                    Console.WriteLine($"No: {item.No} - ^^ - FullName: {item.FullName} - ^^ - Salary: {item.Salary} - ^^ - Position: {item.Position} - ^^ - Department: {item.Department} - ^^ - Startdate: {item.StartDate}");
+                    Console.WriteLine($"No: {item.No}\nFullName: {item.FullName}\nSalary: {item.Salary}\nPosition: {item.Position}\nDepartment: {item.Department}\nStartdate: {item.StartDate}");
                 }
             }
             if (searchCount == 0)
             {
                 Console.WriteLine("There is not user in System");
             }
+        }
+        static bool IsName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return false;
+            }
+            if (!char.IsUpper(name[0]))
+            {
+                return false;
+            }
+            for (int i = 1; i < name.Length; i++)
+            {
+                if (!char.IsLower(name[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        static bool FullName(string name)
+        {
+            var fullName = name.Split(' ');
+            if(fullName.Length < 2 )
+            {
+                return false;
+            }
+            for (int i = 1; i < name.Length; i++)
+            {
+                if (!IsName(fullName[1]))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
